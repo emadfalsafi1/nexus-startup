@@ -639,60 +639,71 @@ interface TechNode {
             <p class="section-subtitle">{{ t().contact.intro }}</p>
           </div>
 
-          <form class="project-form" (ngSubmit)="submitForm()">
-            <div class="form-grid">
-              <div class="form-group">
-                <label>{{ t().contact.fields.name }}</label>
-                <input type="text" [(ngModel)]="formData.name" name="name" required placeholder="Max Mustermann" />
-              </div>
-              <div class="form-group">
-                <label>{{ t().contact.fields.company }}</label>
-                <input type="text" [(ngModel)]="formData.company" name="company" required placeholder="Tech GmbH" />
-              </div>
-              <div class="form-group">
-                <label>{{ t().contact.fields.email }}</label>
-                <input type="email" [(ngModel)]="formData.email" name="email" required placeholder="name@company.de" />
-              </div>
-              <div class="form-group">
-                <label>{{ t().contact.fields.phone }}</label>
-                <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="+49 ..." />
-              </div>
-              <div class="form-group">
-                <label>{{ t().contact.fields.service }}</label>
-                <select [(ngModel)]="formData.service" name="service">
-                  @for (opt of t().contact.serviceOptions; track opt) {
-                    <option [value]="opt">{{ opt }}</option>
-                  }
-                </select>
-              </div>
-              <div class="form-group">
-                <label>{{ t().contact.fields.location }}</label>
-                <input type="text" [(ngModel)]="formData.location" name="location" placeholder="Frankfurt / München / Bundesweit" />
-              </div>
-              <div class="form-group">
-                <label>{{ t().contact.fields.date }}</label>
-                <input type="date" [(ngModel)]="formData.date" name="date" />
-              </div>
-              <div class="form-group">
-                <label>{{ t().contact.fields.file }}</label>
-                <input type="file" class="file-input" />
-              </div>
-              <div class="form-group full-width">
-                <label>{{ t().contact.fields.desc }}</label>
-                <textarea rows="4" [(ngModel)]="formData.description" name="description" required></textarea>
-              </div>
-            </div>
+         <form class="project-form" (ngSubmit)="submitForm($event)">
+  <div class="form-grid">
+    <div class="form-group">
+      <label>{{ t().contact.fields.name }}</label>
+      <input type="text" [(ngModel)]="formData.name" name="name" required placeholder="Max Mustermann" />
+    </div>
+    <div class="form-group">
+      <label>{{ t().contact.fields.company }}</label>
+      <input type="text" [(ngModel)]="formData.company" name="company" required placeholder="Tech GmbH" />
+    </div>
+    <div class="form-group">
+      <label>{{ t().contact.fields.email }}</label>
+      <input type="email" [(ngModel)]="formData.email" name="email" required placeholder="name@company.de" />
+    </div>
+    <div class="form-group">
+      <label>{{ t().contact.fields.phone }}</label>
+      <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="+49 ..." />
+    </div>
+    <div class="form-group">
+      <label>{{ t().contact.fields.service }}</label>
+      <select [(ngModel)]="formData.service" name="service">
+        @for (opt of t().contact.serviceOptions; track opt) {
+          <option [value]="opt">{{ opt }}</option>
+        }
+      </select>
+    </div>
+    <div class="form-group">
+      <label>{{ t().contact.fields.location }}</label>
+      <input type="text" [(ngModel)]="formData.location" name="location" placeholder="Frankfurt / München / Bundesweit" />
+    </div>
+    <div class="form-group">
+      <label>{{ t().contact.fields.date }}</label>
+      <input type="date" [(ngModel)]="formData.date" name="date" />
+    </div>
+    <div class="form-group">
+      <label>{{ t().contact.fields.file }}</label>
+      <input type="file" (change)="onFileSelected($event)" class="file-input" />
+    </div>
+    <div class="form-group full-width">
+      <label>{{ t().contact.fields.desc }}</label>
+      <textarea rows="4" [(ngModel)]="formData.description" name="description" required></textarea>
+    </div>
+  </div>
 
-            <div class="form-actions">
-              <button type="submit" class="btn-primary">{{ t().contact.buttons.quote }}</button>
-              <button type="submit" class="btn-secondary">{{ t().contact.buttons.support }}</button>
-              <button type="submit" class="btn-secondary">{{ t().contact.buttons.partner }}</button>
-            </div>
+  <div class="form-actions">
+    <button type="submit" [disabled]="isSending()" (click)="requestType = 'Quote'" class="btn-primary">
+      {{ isSending() ? '...' : t().contact.buttons.quote }}
+    </button>
+    <button type="submit" [disabled]="isSending()" (click)="requestType = 'Technical Support'" class="btn-secondary">
+      {{ t().contact.buttons.support }}
+    </button>
+    <button type="submit" [disabled]="isSending()" (click)="requestType = 'Partnership'" class="btn-secondary">
+      {{ t().contact.buttons.partner }}
+    </button>
+  </div>
 
-            @if (formSubmitted()) {
-              <div class="form-success">{{ t().contact.successMsg }}</div>
-            }
-          </form>
+  @if (formSubmitted()) {
+    <div class="form-success">{{ t().contact.successMsg }}</div>
+  }
+  @if (formError()) {
+    <div class="form-error" style="margin-top:16px; color:#f87171;">
+      Fehler beim Senden. Bitte prüfen Sie Ihre Eingaben oder schreiben Sie direkt an info&#64;invafo.tech.
+    </div>
+  }
+</form>
         </div>
       </section>
 
@@ -1414,9 +1425,74 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     this.legalModal.set(this.legalModal() === type ? null : type);
   }
 
-  submitForm() {
-    this.formSubmitted.set(true);
-    setTimeout(() => this.formSubmitted.set(false), 6000);
+isSending = signal(false);
+  formError = signal(false);
+  requestType = 'Quote';
+  selectedFile: File | null = null;
+
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.selectedFile = input.files[0];
+    }
+  }
+
+  async submitForm(event: Event) {
+    event.preventDefault();
+    if (!this.formData.name || !this.formData.email || !this.formData.description) {
+      alert(this.lang() === 'de' ? 'Bitte füllen Sie alle Pflichtfelder (*) aus.' : 'Please fill in all required fields (*).');
+      return;
+    }
+
+    this.isSending.set(true);
+    this.formError.set(false);
+
+    // FormData-Objekt erstellen (unterstützt auch Datei-Anhänge)
+    const payload = new FormData();
+    
+    // HIER DEINEN WEB3FORMS ACCESS KEY EINTRAGEN:
+    payload.append('access_key', '53a265c0-284d-44d4-8e75-b0ae21e80c42');
+    
+    payload.append('subject', `Neue INVAFO Anfrage (${this.requestType}) von ${this.formData.company || this.formData.name}`);
+    payload.append('Anfrage-Typ', this.requestType);
+    payload.append('Name', this.formData.name);
+    payload.append('Unternehmen', this.formData.company);
+    payload.append('E-Mail', this.formData.email);
+    payload.append('Telefon', this.formData.phone);
+    payload.append('Fachbereich', this.formData.service);
+    payload.append('Standort', this.formData.location);
+    payload.append('Wunschdatum', this.formData.date);
+    payload.append('Projektbeschreibung', this.formData.description);
+
+    if (this.selectedFile) {
+      payload.append('attachment', this.selectedFile);
+    }
+
+    try {
+      // Wenn du stattdessen Formspree nutzt, ersetze die URL durch 'https://formspree.io/f/DEINE_ID'
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: payload
+      });
+
+      const result = await response.json();
+      if (response.ok && result.success) {
+        this.formSubmitted.set(true);
+        // Formular zurücksetzen
+        this.formData = {
+          name: '', company: '', email: '', phone: '',
+          service: 'IT Solutions & Services', location: '', date: '', description: ''
+        };
+        this.selectedFile = null;
+        setTimeout(() => this.formSubmitted.set(false), 8000);
+      } else {
+        this.formError.set(true);
+      }
+    } catch {
+      this.formError.set(true);
+    } finally {
+      this.isSending.set(false);
+    }
   }
 
   @HostListener('window:scroll')
