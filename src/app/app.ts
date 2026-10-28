@@ -658,20 +658,20 @@ interface TechNode {
       <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="+49 ..." />
     </div>
     <div class="form-group">
-      <label>{{ t().contact.fields.service }}</label>
-      <select [(ngModel)]="formData.service" name="service">
-        @for (opt of t().contact.serviceOptions; track opt) {
-          <option [value]="opt">{{ opt }}</option>
-        }
-      </select>
-    </div>
-    <div class="form-group">
       <label>{{ t().contact.fields.location }}</label>
       <input type="text" [(ngModel)]="formData.location" name="location" placeholder="Frankfurt / München / Bundesweit" />
     </div>
     <div class="form-group">
       <label>{{ t().contact.fields.date }}</label>
       <input type="date" [(ngModel)]="formData.date" name="date" />
+    </div>
+    <div class="form-group  full-width">
+      <label>{{ t().contact.fields.service }}</label>
+      <select [(ngModel)]="formData.service" name="service">
+        @for (opt of t().contact.serviceOptions; track opt) {
+          <option [value]="opt">{{ opt }}</option>
+        }
+      </select>
     </div>
     <div class="form-group full-width">
       <label>{{ t().contact.fields.desc }}</label>
