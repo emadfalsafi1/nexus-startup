@@ -23,7 +23,7 @@ const CONTENT = {
     hero: {
       headline: 'Technologie, die funktioniert. Service, dem Sie vertrauen können.',
       subheadline: 'Professionelle IT-, AV- & Digital Signage-Services in ganz Deutschland.',
-      body: 'Von Engineering und Systemintegration bis hin zu Installation, Rollout und laufendem technischem Support liefert INVAFO zuverlässige Technologiedienstleistungen für Unternehmen, Systemintegratoren und Technologiepartner.',
+      body: 'Von Engineering und Systemintegration bis hin zu Installation, Rollout und laufendem technischem Support liefert INFAVO zuverlässige Technologiedienstleistungen für Unternehmen, Systemintegratoren und Technologiepartner.',
       primaryBtn: 'Services entdecken',
       secondaryBtn: 'Projekt besprechen',
       quickRouteLabel: 'Direkt zum Fachbereich:'
@@ -88,7 +88,7 @@ const CONTENT = {
     field: {
       eyebrow: 'ENGINEERING & FIELD SERVICES',
       title: 'Technische Expertise. Überall dort, wo Sie sie brauchen.',
-      intro: 'INVAFO bietet flexible Engineering- und technische Vor-Ort-Services zur Unterstützung von Technologie-Rollouts, Installationen und dem laufenden Servicebetrieb.',
+      intro: 'INFAVO bietet flexible Engineering- und technische Vor-Ort-Services zur Unterstützung von Technologie-Rollouts, Installationen und dem laufenden Servicebetrieb.',
       capabilities: [
         'Field Engineer Dispatch (Vor-Ort-Entsendung)',
         'On-Site Technical Support',
@@ -107,8 +107,8 @@ const CONTENT = {
     partners: {
       eyebrow: 'FOR TECHNOLOGY PARTNERS (B2B & SUBCONTRACTING)',
       title: 'Ihr technischer Umsetzungspartner in Deutschland.',
-      subtitle: 'Erweitern Sie Ihre Servicekapazitäten mit INVAFO.',
-      intro: 'Wir unterstützen IT-Dienstleister, AV-Integratoren, Digital-Signage-Unternehmen, Managed Service Provider und internationale Technologieorganisationen mit Engineering-Ressourcen, Projektabwicklung und technischem Vor-Ort-Service. Ob einzelner Ingenieur für einen dringenden Einsatz oder koordiniertes Technik-Team für einen Multi-Site-Rollout – INVAFO bietet flexible, projektbasierte Unterstützung.',
+      subtitle: 'Erweitern Sie Ihre Servicekapazitäten mit INFAVO.',
+      intro: 'Wir unterstützen IT-Dienstleister, AV-Integratoren, Digital-Signage-Unternehmen, Managed Service Provider und internationale Technologieorganisationen mit Engineering-Ressourcen, Projektabwicklung und technischem Vor-Ort-Service. Ob einzelner Ingenieur für einen dringenden Einsatz oder koordiniertes Technik-Team für einen Multi-Site-Rollout – INFAVO bietet flexible, projektbasierte Unterstützung.',
       services: [
         'Subcontracted Technical Services',
         'Entsendung von Ingenieuren & Technikern',
@@ -136,7 +136,7 @@ const CONTENT = {
       ]
     },
     why: {
-      eyebrow: 'WARUM INVAFO?',
+      eyebrow: 'WARUM INFAVO?',
       title: 'Expertise. Flexibilität. Verlässliche Umsetzung.',
       props: [
         { title: 'Ein Technologiepartner', desc: 'Integrierte Servicekompetenz über IT, Professional AV und Digital Signage hinweg.' },
@@ -148,9 +148,9 @@ const CONTENT = {
       ]
     },
     about: {
-      eyebrow: 'ÜBER INVAFO',
+      eyebrow: 'ÜBER INFAVO',
       title: 'Technologie-Expertise. Professionelle Service-Ausführung.',
-      body: 'INVAFO ist ein in Deutschland ansässiger Technology Services Provider mit Spezialisierung auf IT, professionelle audiovisuelle Systeme und Digital Signage. Wir liefern technische Dienstleistungen für Unternehmen, Systemintegratoren und Technologiepartner – von der Installation über die Systemintegration bis hin zu Fehlersuche und Wartung.',
+      body: 'INFAVO ist ein in Deutschland ansässiger Technology Services Provider mit Spezialisierung auf IT, professionelle audiovisuelle Systeme und Digital Signage. Wir liefern technische Dienstleistungen für Unternehmen, Systemintegratoren und Technologiepartner – von der Installation über die Systemintegration bis hin zu Fehlersuche und Wartung.',
       missionTitle: 'Unsere Mission',
       mission: 'Unsere Mission ist es, die Umsetzung technologischer Projekte zu vereinfachen, indem wir exakt die richtige technische Expertise mit den jeweiligen Projektanforderungen verbinden.'
     },
@@ -206,7 +206,7 @@ const CONTENT = {
     hero: {
       headline: 'Technology That Works. Service You Can Trust.',
       subheadline: 'Professional IT, AV & Digital Signage Services Across Germany.',
-      body: 'From engineering and system integration to installation, deployment and ongoing technical support, INVAFO delivers reliable technology services for businesses, system integrators and technology partners.',
+      body: 'From engineering and system integration to installation, deployment and ongoing technical support, INFAVO delivers reliable technology services for businesses, system integrators and technology partners.',
       primaryBtn: 'Explore Our Services',
       secondaryBtn: 'Discuss Your Project',
       quickRouteLabel: 'Jump directly to your specialization:'
@@ -271,7 +271,7 @@ const CONTENT = {
     field: {
       eyebrow: 'ENGINEERING & FIELD SERVICES',
       title: 'Technical Expertise. Wherever You Need It.',
-      intro: 'INVAFO provides flexible engineering and technical field services to support technology deployments, installations and service operations.',
+      intro: 'INFAVO provides flexible engineering and technical field services to support technology deployments, installations and service operations.',
       capabilities: [
         'Field Engineer Dispatch',
         'On-Site Technical Support',
@@ -290,8 +290,8 @@ const CONTENT = {
     partners: {
       eyebrow: 'FOR TECHNOLOGY PARTNERS',
       title: 'Your Technical Delivery Partner in Germany.',
-      subtitle: 'Extend your service capabilities with INVAFO.',
-      intro: 'We support IT service providers, AV integrators, digital signage companies, managed service providers and international technology organizations with engineering resources, project execution and technical service delivery. Whether you need a single engineer for an urgent service call or a coordinated technical team for a multi-site deployment, INVAFO offers flexible project-based support.',
+      subtitle: 'Extend your service capabilities with INFAVO.',
+      intro: 'We support IT service providers, AV integrators, digital signage companies, managed service providers and international technology organizations with engineering resources, project execution and technical service delivery. Whether you need a single engineer for an urgent service call or a coordinated technical team for a multi-site deployment, INFAVO offers flexible project-based support.',
       services: [
         'Subcontracted Technical Services',
         'Engineer & Technician Dispatch',
@@ -319,7 +319,7 @@ const CONTENT = {
       ]
     },
     why: {
-      eyebrow: 'WHY INVAFO?',
+      eyebrow: 'WHY INFAVO?',
       title: 'Expertise. Flexibility. Reliable Execution.',
       props: [
         { title: 'One Technology Partner', desc: 'Integrated service capabilities across IT, professional AV and digital signage.' },
@@ -331,9 +331,9 @@ const CONTENT = {
       ]
     },
     about: {
-      eyebrow: 'ABOUT INVAFO',
+      eyebrow: 'ABOUT INFAVO',
       title: 'Technology Expertise. Professional Service Delivery.',
-      body: 'INVAFO is a Germany-based technology services provider specializing in IT, professional audiovisual systems and digital signage. We deliver technical services to businesses, system integrators and technology partners, supporting projects from installation and deployment to system integration, troubleshooting and maintenance.',
+      body: 'INFAVO is a Germany-based technology services provider specializing in IT, professional audiovisual systems and digital signage. We deliver technical services to businesses, system integrators and technology partners, supporting projects from installation and deployment to system integration, troubleshooting and maintenance.',
       missionTitle: 'Our Mission',
       mission: 'Our mission is to simplify technology project execution by connecting the right technical expertise with the right project requirements.'
     },
@@ -392,8 +392,8 @@ interface TechNode {
     <!-- STICKY HEADER (Modern und Schlicht) -->
     <header class="site-header">
       <div class="header-inner">
-        <!-- Brand Logo (Vector recreation of INVAFO logo) -->
-        <a href="#home" class="brand-logo" aria-label="INVAFO Home">
+        <!-- Brand Logo (Vector recreation of INFAVO logo) -->
+        <a href="#home" class="brand-logo" aria-label="INFAVO Home">
           <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -421,7 +421,7 @@ interface TechNode {
             <path d="M15 89 L88 52 C92 50, 96 55, 91 59 L19 96 C14 98, 11 92, 15 89 Z" fill="url(#navyGrad)" stroke="#0ea5e9" stroke-width="1"/>
           </svg>
           <div class="brand-text">
-            <span class="brand-name">INVAFO<span class="tech-dot">.tech</span></span>
+            <span class="brand-name">INFAVO<span class="tech-dot">.tech</span></span>
             <span class="brand-sub">{{ t().tagline }}</span>
           </div>
         </a>
@@ -583,7 +583,7 @@ interface TechNode {
         </div>
       </section>
 
-      <!-- 5. INDUSTRIES WE SERVE & 6. WHY INVAFO -->
+      <!-- 5. INDUSTRIES WE SERVE & 6. WHY INFAVO -->
       <section class="section alt-bg">
         <div class="container">
           <!-- Industries -->
@@ -599,7 +599,7 @@ interface TechNode {
 
           <div class="spacer-lg"></div>
 
-          <!-- Why INVAFO -->
+          <!-- Why INFAVO -->
           <div class="section-head">
             <span class="eyebrow">{{ t().why.eyebrow }}</span>
             <h2 class="section-title">{{ t().why.title }}</h2>
@@ -615,7 +615,7 @@ interface TechNode {
         </div>
       </section>
 
-      <!-- 7. ABOUT INVAFO -->
+      <!-- 7. ABOUT INFAVO -->
       <section id="about" class="section">
         <div class="container">
           <div class="about-box">
@@ -702,8 +702,8 @@ interface TechNode {
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <strong>INVAFO.tech</strong> — {{ t().brandPos }} ({{ t().tagline }})
-          <p>© {{ currentYear }} INVAFO. {{ t().footer.rights }}</p>
+          <strong>INFAVO.tech</strong> — {{ t().brandPos }} ({{ t().tagline }})
+          <p>© {{ currentYear }} INFAVO. {{ t().footer.rights }}</p>
         </div>
         <div class="footer-legal">
           <a href="#impressum" (click)="toggleLegal('impressum'); $event.preventDefault()">{{ t().footer.impressum }}</a>
@@ -715,7 +715,7 @@ interface TechNode {
         <div class="legal-drawer container">
           @if (legalModal() === 'impressum') {
             <h4>Impressum (Angaben gemäß § 5 TMG / DDG)</h4>
-            <p>INVAFO Technology Services • Deutschland • E-Mail: info&#64;invafo.tech</p>
+            <p>INFAVO Technology Services • Deutschland • E-Mail: info&#64;INFAVO.tech</p>
           } @else {
             <h4>Datenschutzhinweis (DSGVO / GDPR)</h4>
             <p>Ihre eingegebenen Projektdaten werden ausschließlich zur Bearbeitung Ihrer B2B-Anfrage gemäß Art. 6 Abs. 1 lit. b DSGVO verarbeitet.</p>
@@ -1207,7 +1207,7 @@ interface TechNode {
       flex-shrink: 0;
     }
 
-    /* INDUSTRIES & WHY INVAFO */
+    /* INDUSTRIES & WHY INFAVO */
     .industries-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
