@@ -673,10 +673,6 @@ interface TechNode {
       <label>{{ t().contact.fields.date }}</label>
       <input type="date" [(ngModel)]="formData.date" name="date" />
     </div>
-    <div class="form-group">
-      <label>{{ t().contact.fields.file }}</label>
-      <input type="file" (change)="onFileSelected($event)" class="file-input" />
-    </div>
     <div class="form-group full-width">
       <label>{{ t().contact.fields.desc }}</label>
       <textarea rows="4" [(ngModel)]="formData.description" name="description" required></textarea>
@@ -700,7 +696,7 @@ interface TechNode {
   }
   @if (formError()) {
     <div class="form-error" style="margin-top:16px; color:#f87171;">
-      Fehler beim Senden. Bitte prüfen Sie Ihre Eingaben oder schreiben Sie direkt an info&#64;invafo.tech.
+      Fehler beim Senden. Bitte prüfen Sie Ihre Eingaben oder schreiben Sie direkt an info&#64;infavo.tech.
     </div>
   }
 </form>
@@ -1453,7 +1449,7 @@ isSending = signal(false);
     // HIER DEINEN WEB3FORMS ACCESS KEY EINTRAGEN:
     payload.append('access_key', '53a265c0-284d-44d4-8e75-b0ae21e80c42');
     
-    payload.append('subject', `Neue INVAFO Anfrage (${this.requestType}) von ${this.formData.company || this.formData.name}`);
+    payload.append('subject', `Neue INFAVO Anfrage (${this.requestType}) von ${this.formData.company || this.formData.name}`);
     payload.append('Anfrage-Typ', this.requestType);
     payload.append('Name', this.formData.name);
     payload.append('Unternehmen', this.formData.company);
