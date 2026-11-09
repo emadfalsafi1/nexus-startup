@@ -3,185 +3,151 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 type Lang = 'de' | 'en';
-type ServiceKey = 'it' | 'av' | 'ds';
+type ServiceKey = 'av' | 'ds' | 'it';
 
 const CONTENT = {
   de: {
     tagline: 'Your Partner in Technology.',
-    brandPos: 'Technology Services Provider',
+    brandPos: 'On-Site Management • AV, Signage & IT',
     nav: {
       home: 'Home',
-      it: 'IT Services',
-      av: 'AV Solutions',
+      onsite: 'On-Site Management',
+      av: 'Professional AV',
       ds: 'Digital Signage',
-      field: 'Engineering & Field',
-      partners: 'Für Partner',
+      it: 'IT & Rollout',
       about: 'Über uns',
       contact: 'Kontakt',
       cta: 'Angebot anfordern'
     },
     hero: {
-      headline: 'Technologie, die funktioniert. Service, dem Sie vertrauen können.',
-      subheadline: 'Professionelle IT-, AV- & Digital Signage-Services in ganz Deutschland.',
-      body: 'Von Engineering und Systemintegration bis hin zu Installation, Rollout und laufendem technischem Support liefert INFAVO zuverlässige Technologiedienstleistungen für Unternehmen, Systemintegratoren und Technologiepartner.',
-      primaryBtn: 'Services entdecken',
+      headline: 'Erfahrenes On-Site Management & Integration für Ihre AV-, Signage- und IT-Projekte.',
+      subheadline: 'Verlässliche Umsetzung vor Ort in ganz Deutschland – genau so, wie Sie es selbst tun würden.',
+      body: 'Technische Hürden, enge Zeitpläne, laufender Kundenbetrieb oder Sprachbarrieren auf der Baustelle: Wenn die Entsendung Ihres eigenen Teams über mehrere Standorte hinweg zu kostspielig oder unpraktikabel ist, sorgt INFAVO vor Ort dafür, dass Ihr Projekt pünktlich und nach Plan abgeschlossen wird.',
+      primaryBtn: 'On-Site Management entdecken',
       secondaryBtn: 'Projekt besprechen',
-      quickRouteLabel: 'Direkt zum Fachbereich:'
+      quickRouteLabel: 'Direkt zu unseren drei Kernbereichen:'
+    },
+    onsite: {
+      eyebrow: 'ON-SITE MANAGEMENT & PROJEKTSTEUERUNG',
+      title: 'Die zusätzliche Vor-Ort-Kompetenz, damit Ihr Projekt nach Plan ans Ziel kommt.',
+      p1: 'Zahlreiche Faktoren können Ihr digitales Kommunikations- oder Infrastrukturprojekt vor Herausforderungen stellen: Technische Störungen, Verzögerungen, Subunternehmer oder Sprachbarrieren sind potenzielle Hindernisse, die ein erfahrenes On-Site Management erfordern. Häufig läuft der Betrieb am Standort weiter, während AV- und IT-Technologien installiert, geprüft und eingerichtet werden – und Ihre Kunden erwarten einen reibungslosen Übergang.',
+      p2: 'Umgekehrt müssen Projekte oft außerhalb der Geschäftszeiten, am Wochenende oder nachts umgesetzt werden. Ohne starke Steuerung vor Ort geraten Projekte ins Stocken, verursachen Zusatzkosten und binden wertvolle Ressourcen. Zwar ist die Entsendung eines eigenen Teams oft die erste Wahl, doch über mehrere Standorte, Projekte und Ländergrenzen hinweg ist dies häufig zu teuer oder schlicht nicht machbar.',
+      p3: 'Genau hier hilft INFAVO: Wir sind ein freundliches, eingespieltes Team aus qualifizierten AV- und IT-Experten und übernehmen das umfassende On-Site- und Projektmanagement für Ihre Vorhaben in Deutschland. Wenn Sie Teile Ihres Projekts auslagern, müssen Sie sich darauf verlassen können, dass Ihr Partner genauso kompetent liefert wie Sie selbst – vom nationalen oder internationalen Multi-Site-Rollout bis zur vollständigen technischen Implementierung.',
+      cta: 'Anforderungen besprechen & Angebot erhalten',
+      highlights: [
+        {
+          title: 'Laufender Betrieb & Out-of-Hours',
+          desc: 'Reibungslose Installation während der Öffnungszeiten oder termingerechte Umsetzung nachts und am Wochenende.'
+        },
+        {
+          title: 'Koordination & Problemlösung vor Ort',
+          desc: 'Aktive Steuerung von Subunternehmern, direkte Behebung technischer Fehler und Vermeidung teurer Projektverzögerungen.'
+        },
+        {
+          title: 'Keine Sprach- oder Distanzbarrieren',
+          desc: 'Sichere Kommunikation auf Deutsch und Englisch direkt am Standort – ideal für internationale Auftraggeber mit Projekten in Deutschland.'
+        },
+        {
+          title: 'Nahtloses White-Label-Auftreten',
+          desc: 'Wir agieren als verlässliche Verlängerung Ihres Teams und vertreten Ihren Qualitätsanspruch souverän gegenüber dem Endkunden.'
+        }
+      ]
     },
     expertise: {
-      eyebrow: 'UNSERE KOMPETENZEN',
-      title: 'Drei Kernbereiche. Ein verlässlicher Technologiepartner.',
-      subtitle: 'Wählen Sie Ihren Fokusbereich für detaillierte Leistungsmerkmale oder entdecken Sie unser gesamtes Spektrum.',
-      selectBtn: 'Leistungen im Detail ansehen →',
+      eyebrow: 'UNSERE FACHBEREICHE',
+      title: 'Fokussierte Expertise statt Bauchladen.',
+      subtitle: 'Wir behaupten nicht, alles zu können – sondern konzentrieren uns gezielt auf die Schnittstelle aus professioneller Medientechnik (AV), Digital Signage und der zugehörigen Standort-IT.',
+      selectBtn: 'Kernleistungen ansehen →',
       requestBtn: 'Projekt in diesem Bereich anfragen',
       categories: {
-        it: {
-          code: 'IT',
-          title: 'IT Solutions & Services',
-          short: 'IT-Infrastruktur, Netzwerkinstallation & -konfiguration, Workplace-Technologie, Hardware-Rollouts, Troubleshooting und technischer Support.',
-          items: [
-            'IT-Infrastruktur & Netzwerk-Services',
-            'Netzwerkinstallation & -konfiguration',
-            'IT-Hardware-Rollout & Austausch',
-            'End-User Computing & Workplace Support',
-            'On-Site & Remote Technical Support',
-            'Strukturierte Verkabelung & Konnektivität',
-            'Break & Fix Services',
-            'IT-Projekt-Rollouts & Bereitstellung',
-            'Smart Hands & Remote Hands'
-          ]
-        },
         av: {
           code: 'AV',
           title: 'Professional AV Solutions',
-          short: 'Professionelle Audio- und Videosysteme, Konferenzraumtechnik, Videokonferenzen, AV-Integration, Inbetriebnahme und Engineering.',
+          short: 'Konferenzraumtechnik, vernetzte Audio- und Videosysteme, Systemintegration und Inbetriebnahme vor Ort.',
           items: [
-            'Professionelle Audio- & Videosysteme',
-            'AV-Systeminstallation & Integration',
-            'Meeting- & Konferenzraum-Technologie',
-            'Videokonferenz-Lösungen',
-            'Audio-DSP & Steuerungssysteme',
-            'Q-SYS & vernetzte AV-Lösungen',
-            'AV-Engineering & Inbetriebnahme (Commissioning)',
-            'AV-Troubleshooting & Wartung',
-            'AV-System-Upgrades & Modernisierung'
+            'Integration von Meeting-, Konferenz- und Kollaborationsräumen',
+            'Inbetriebnahme (Commissioning), Audio-DSP & Q-SYS-Umgebungen',
+            'Fachgerechte Montage und Einrichtung von Videokonferenz-Systemen',
+            'Vor-Ort-Diagnose, Fehlersuche (Troubleshooting) & Systemübergabe'
           ]
         },
         ds: {
           code: 'DS',
           title: 'Digital Signage Solutions',
-          short: 'Kommerzielle Displays, Digital Signage Installationen, Media-Player-Rollouts, Videowände, Systemintegration und laufende Wartung.',
+          short: 'Kommerzielle Displays, Video-Walls, Media-Player-Rollouts und zuverlässiger Service für Retail- und Unternehmenskunden.',
           items: [
-            'Digital Signage Installation & Integration',
-            'Rollout kommerzieller Displays',
-            'Media-Player Installation & Konfiguration',
-            'LED-Wände & Video-Wall-Systeme',
-            'Digital Signage Netzwerkanbindung',
-            'Troubleshooting bei der Content-Wiedergabe',
-            'Hardware-Austausch & Break & Fix',
-            'Multi-Site Digital Signage Rollouts',
-            'Präventive & korrektive Wartung'
+            'Installation & Integration kommerzieller Displays und LED-/Video-Walls',
+            'Rollout, Konfiguration & Netzwerkanbindung von Media-Playern',
+            'Koordinierte Multi-Site-Rollouts über mehrere Filialen und Standorte',
+            'Schneller Hardware-Austausch (Break & Fix) und Wartung vor Ort'
+          ]
+        },
+        it: {
+          code: 'IT',
+          title: 'IT & Network Rollout',
+          short: 'Das technische Fundament am Standort: Netzwerk-Rollouts, Rack-Aufbau, Verkabelung und qualifizierte Smart-Hands-Einsätze.',
+          items: [
+            'Netzwerk-Installation, Rack-Aufbau, Patching & Standort-Konnektivität',
+            'Strukturierte IT-Hardware-Rollouts & Workplace-Bereitstellung',
+            'Qualifizierte Smart-Hands-Unterstützung in enger Abstimmung mit Ihrem Remote-Team',
+            'Technische Standortaufnahmen (Site Surveys) & saubere Dokumentation'
           ]
         }
       }
     },
-    field: {
-      eyebrow: 'ENGINEERING & FIELD SERVICES',
-      title: 'Technische Expertise. Überall dort, wo Sie sie brauchen.',
-      intro: 'INFAVO bietet flexible Engineering- und technische Vor-Ort-Services zur Unterstützung von Technologie-Rollouts, Installationen und dem laufenden Servicebetrieb.',
-      capabilities: [
-        'Field Engineer Dispatch (Vor-Ort-Entsendung)',
-        'On-Site Technical Support',
-        'Engineering- & Technik-Ressourcen',
-        'Installations- & Deployment-Services',
-        'Break & Fix & Troubleshooting',
-        'Site Surveys & Technische Standortanalysen',
-        'Inbetriebnahme & Systemverifizierung',
-        'Präventive Wartung (Preventive Maintenance)',
-        'SLA-basierte Support-Vereinbarungen',
-        'Multi-Site Projektkoordination',
-        'White-Label Technical Services'
-      ],
-      note: 'Hinweis: Leistungen und Reaktionszeiten werden individuell nach Projektanforderungen und Ressourcenverfügbarkeit vereinbart.'
-    },
-    partners: {
-      eyebrow: 'FOR TECHNOLOGY PARTNERS (B2B & SUBCONTRACTING)',
-      title: 'Ihr technischer Umsetzungspartner in Deutschland.',
-      subtitle: 'Erweitern Sie Ihre Servicekapazitäten mit INFAVO.',
-      intro: 'Wir unterstützen IT-Dienstleister, AV-Integratoren, Digital-Signage-Unternehmen, Managed Service Provider und internationale Technologieorganisationen mit Engineering-Ressourcen, Projektabwicklung und technischem Vor-Ort-Service. Ob einzelner Ingenieur für einen dringenden Einsatz oder koordiniertes Technik-Team für einen Multi-Site-Rollout – INFAVO bietet flexible, projektbasierte Unterstützung.',
-      services: [
-        'Subcontracted Technical Services',
-        'Entsendung von Ingenieuren & Technikern',
-        'White-Label Service Delivery (in Ihrem Namen)',
-        'Multi-Site Rollout-Unterstützung',
-        'Projektbasierte Engineering-Ressourcen',
-        'On-Site Troubleshooting & Break & Fix',
-        'Installation, Inbetriebnahme & Wartung',
-        'Technische Dokumentation & Reporting'
-      ],
-      cta: 'Partner werden'
-    },
-    industries: {
-      eyebrow: 'BRANCHEN',
-      title: 'Technologie-Services für jede Geschäftsumgebung.',
-      sectors: [
-        'Retail & Filialisten (Multi-Site Stores)',
-        'Hospitality, Hotels & Gastronomie',
-        'Unternehmenszentralen & Corporate Offices',
-        'Gewerbeimmobilien (Commercial Properties)',
-        'Bildungs- & Trainingseinrichtungen',
-        'Entertainment & Freizeit',
-        'Gesundheitswesen & Kliniken',
-        'Technologie- & Systemintegrations-Unternehmen'
-      ]
-    },
     why: {
-      eyebrow: 'WARUM INFAVO?',
-      title: 'Expertise. Flexibilität. Verlässliche Umsetzung.',
+      eyebrow: 'FÜR WEN WIR ARBEITEN',
+      title: 'Wann INFAVO der richtige Partner für Sie ist.',
       props: [
-        { title: 'Ein Technologiepartner', desc: 'Integrierte Servicekompetenz über IT, Professional AV und Digital Signage hinweg.' },
-        { title: 'Flexible Engineering-Ressourcen', desc: 'Zugriff auf technische Spezialisten exakt nach Projektumfang und Anforderung.' },
-        { title: 'Projektfokussierte Lieferung', desc: 'Von einzelnen Serviceeinsätzen bis zu koordinierten deutschlandweiten Rollouts.' },
-        { title: 'Professionelle Kommunikation', desc: 'Klare Projektkoordination, technisches Reporting und transparente Dokumentation.' },
-        { title: 'Partnerorientierter Ansatz', desc: 'Nahtlose Zusammenarbeit mit Technologieanbietern, Integratoren und Geschäftskunden.' },
-        { title: 'Fokus auf Deutschland', desc: 'Koordinierte technische Services für Kundenstandorte in ganz Deutschland.' }
+        {
+          title: 'Internationale AV- & IT-Integratoren',
+          desc: 'Sie realisieren Projekte in Deutschland und benötigen erfahrene Bau- und Projektleitung vor Ort, ohne eigene Teams einfliegen zu müssen.'
+        },
+        {
+          title: 'Digital-Signage- & Systemhäuser',
+          desc: 'Sie suchen für Multi-Site-Rollouts oder Auftragsspitzen ein eingespieltes Technik-Team, das zuverlässig in Ihrem Namen liefert.'
+        },
+        {
+          title: 'Unternehmen & Filialisten',
+          desc: 'Sie modernisieren Konferenzräume, Displays oder Standort-IT und wünschen sich einen Partner, der den Umbau auch im laufenden Betrieb ruhig und strukturiert steuert.'
+        }
       ]
     },
     about: {
       eyebrow: 'ÜBER INFAVO',
-      title: 'Technologie-Expertise. Professionelle Service-Ausführung.',
-      body: 'INFAVO ist ein in Deutschland ansässiger Technology Services Provider mit Spezialisierung auf IT, professionelle audiovisuelle Systeme und Digital Signage. Wir liefern technische Dienstleistungen für Unternehmen, Systemintegratoren und Technologiepartner – von der Installation über die Systemintegration bis hin zu Fehlersuche und Wartung.',
-      missionTitle: 'Unsere Mission',
-      mission: 'Unsere Mission ist es, die Umsetzung technologischer Projekte zu vereinfachen, indem wir exakt die richtige technische Expertise mit den jeweiligen Projektanforderungen verbinden.'
+      title: 'Ein freundliches Team aus erfahrenen AV- und IT-Experten.',
+      body: 'INFAVO unterstützt Systemintegratoren, Technologiepartner und Unternehmen bei der praktischen Umsetzung und dem On-Site Management von AV-, Digital-Signage- und IT-Projekten in Deutschland. Statt endloser Schlagwortlisten setzen wir auf ehrliche Beratung, saubere Ausführung und verbindliche Kommunikation.',
+      missionTitle: 'Unser Versprechen',
+      mission: 'Wenn Sie einen Teil Ihres Projekts an INFAVO übergeben, können Sie sicher sein, dass wir es vor Ort mit derselben Sorgfalt, Kompetenz und Verlässlichkeit zum Abschluss bringen, wie Sie es selbst tun würden.'
     },
     contact: {
-      eyebrow: 'KONTAKT & PROJEKTANFRAGEN',
-      title: 'Lassen Sie uns Ihr nächstes Projekt realisieren.',
-      intro: 'Benötigen Sie technischen Support, einen Installationspartner oder Engineering-Ressourcen für Ihr nächstes Projekt? Teilen Sie uns Ihre Anforderungen mit.',
+      eyebrow: 'KONTAKT & ANGEBOT',
+      title: 'Besprechen Sie Ihre Anforderungen mit uns.',
+      intro: 'Kontaktieren Sie INFAVO, um Ihr Vorhaben zu besprechen und ein faires, transparentes Angebot für Ihr Projekt zu erhalten.',
       fields: {
         name: 'Name *',
         company: 'Unternehmen *',
         email: 'Geschäftliche E-Mail *',
         phone: 'Telefonnummer',
-        service: 'Benötigter Bereich *',
-        location: 'Projektstandort (Stadt / Region in DE)',
-        date: 'Gewünschter Zeitraum / Startdatum',
+        service: 'Schwerpunkt Ihres Projekts *',
+        location: 'Projektstandort(e) in Deutschland',
+        date: 'Geplanter Zeitraum / Startdatum',
         desc: 'Projektbeschreibung & Anforderungen *',
         file: 'Projektdatei / Leistungsverzeichnis anhängen (Optional)'
       },
       serviceOptions: [
-        'IT Solutions & Services',
+        'On-Site Management & Projektkoordination',
         'Professional AV Solutions',
         'Digital Signage Solutions',
-        'Engineering & Field Services',
-        'B2B Technology Partnership / Subcontracting'
+        'IT & Network Rollout / Smart Hands',
+        'B2B-Partnerschaft / Subcontracting'
       ],
       buttons: {
         quote: 'Angebot anfordern',
-        support: 'Technischen Support anfordern',
+        support: 'Vor-Ort-Einsatz anfragen',
         partner: 'Partnerschaft besprechen'
       },
-      successMsg: 'Vielen Dank! Ihre Projektanfrage wurde erfasst. Unser Engineering-Team meldet sich in Kürze bei Ihnen.'
+      successMsg: 'Vielen Dank! Ihre Projektanfrage wurde erfasst. Wir melden uns in Kürze persönlich bei Ihnen.'
     },
     footer: {
       impressum: 'Impressum',
@@ -191,180 +157,146 @@ const CONTENT = {
   },
   en: {
     tagline: 'Your Partner in Technology.',
-    brandPos: 'Technology Services Provider',
+    brandPos: 'On-Site Management • AV, Signage & IT',
     nav: {
       home: 'Home',
-      it: 'IT Services',
-      av: 'AV Solutions',
+      onsite: 'On-Site Management',
+      av: 'Professional AV',
       ds: 'Digital Signage',
-      field: 'Engineering & Field',
-      partners: 'For Partners',
+      it: 'IT & Rollout',
       about: 'About',
       contact: 'Contact',
-      cta: 'Request a Quote'
+      cta: 'Obtain a Quote'
     },
     hero: {
-      headline: 'Technology That Works. Service You Can Trust.',
-      subheadline: 'Professional IT, AV & Digital Signage Services Across Germany.',
-      body: 'From engineering and system integration to installation, deployment and ongoing technical support, INFAVO delivers reliable technology services for businesses, system integrators and technology partners.',
-      primaryBtn: 'Explore Our Services',
+      headline: 'Experienced On-Site Management & Integration for Your AV, Signage and IT Projects.',
+      subheadline: 'Competent On-Site Delivery Across Germany — Just as You Would.',
+      body: 'Technical faults, delays, subcontractors, or language barriers: when dispatching your own team across multiple sites and territories is costly or unfeasible, INFAVO provides the skilled on-site management and technical execution your project needs to finish on plan.',
+      primaryBtn: 'Explore On-Site Management',
       secondaryBtn: 'Discuss Your Project',
-      quickRouteLabel: 'Jump directly to your specialization:'
+      quickRouteLabel: 'Jump directly to our three core areas:'
+    },
+    onsite: {
+      eyebrow: 'ON-SITE MANAGEMENT & PROJECT DELIVERY',
+      title: 'The Extra Resources Your Project Needs to Finish on Plan.',
+      p1: 'Numerous complications can challenge your digital communications or infrastructure project. Technical faults, delays, subcontractors, and language barriers are potential obstacles that require experienced on-site management. Sites are routinely still operational whilst AV and IT technologies are installed, diagnosed, and managed, and clients require a smooth transition.',
+      p2: 'Conversely, a project may need to be managed out of hours, at weekends, or at night. Without strong on-site management, projects flounder, incur extra costs, and deplete resources. Whilst dispatching your own on-site management team is the first choice, this may be costly or unfeasible across multiple sites, projects, and territories.',
+      p3: 'Here, INFAVO can help. We are a friendly team of skilled AV and IT experts who provide comprehensive on-site and project management for your AV, digital signage, and IT projects in Germany. When outsourcing any element of your project, you need to be confident that your chosen partner will competently deliver the project just as you would — from multi-site, national, and overseas projects through to full digital implementation.',
+      cta: 'Discuss Your Requirements & Obtain a Quote',
+      highlights: [
+        {
+          title: 'Live Operational Sites & Out-of-Hours',
+          desc: 'Smooth transitions while sites remain operational, or dedicated execution out of hours, at weekends, or at night.'
+        },
+        {
+          title: 'Subcontractor & Fault Management',
+          desc: 'Hands-on coordination of local trades, rapid diagnosis of technical faults, and keeping schedules on track.'
+        },
+        {
+          title: 'Overcoming Language Barriers',
+          desc: 'Fluent German and English communication on site — bridging the gap for international partners delivering projects in Germany.'
+        },
+        {
+          title: 'Seamless White-Label Delivery',
+          desc: 'We represent your business on site with the same care, reliability, and technical standards as your own team.'
+        }
+      ]
     },
     expertise: {
-      eyebrow: 'OUR EXPERTISE',
-      title: 'Three Core Service Areas. One Reliable Technology Partner.',
-      subtitle: 'Select your area of interest to inspect dedicated capabilities or explore our full service portfolio.',
-      selectBtn: 'Explore Dedicated Capabilities →',
+      eyebrow: 'OUR CORE CAPABILITIES',
+      title: 'Focused Expertise You Can Trust.',
+      subtitle: 'Rather than claiming to do everything, we focus on what we do best: the practical intersection of professional AV, digital signage, and on-site IT rollout.',
+      selectBtn: 'View Core Capabilities →',
       requestBtn: 'Request Project in This Area',
       categories: {
-        it: {
-          code: 'IT',
-          title: 'IT Solutions & Services',
-          short: 'IT infrastructure, network installation and configuration, workplace technology, hardware deployment, troubleshooting and technical support.',
-          items: [
-            'IT Infrastructure & Network Services',
-            'Network Installation & Configuration',
-            'IT Hardware Deployment & Replacement',
-            'End-User Computing & Workplace Support',
-            'On-Site & Remote Technical Support',
-            'Structured Cabling & Connectivity',
-            'Break & Fix Services',
-            'IT Project Deployment & Rollouts',
-            'Smart Hands & Remote Hands'
-          ]
-        },
         av: {
           code: 'AV',
           title: 'Professional AV Solutions',
-          short: 'Professional audio and video systems, meeting room technology, video conferencing, AV integration, system commissioning and technical engineering services.',
+          short: 'Meeting room technology, networked audio/video systems, AV integration, and on-site commissioning.',
           items: [
-            'Professional Audio & Video Systems',
-            'AV System Installation & Integration',
-            'Meeting Room & Conference Room Technology',
-            'Video Conferencing Solutions',
-            'Audio DSP & Control Systems',
-            'Q-SYS & Networked AV Solutions',
-            'AV Engineering & Commissioning',
-            'AV Troubleshooting & Maintenance',
-            'AV System Upgrades & Modernization'
+            'Meeting, Conference & Collaboration Room Integration',
+            'System Commissioning, Audio DSP & Q-SYS Environments',
+            'Video Conferencing Installation, Alignment & Testing',
+            'On-Site Diagnostics, Troubleshooting & Client Handover'
           ]
         },
         ds: {
           code: 'DS',
           title: 'Digital Signage Solutions',
-          short: 'Commercial displays, digital signage installations, media player deployment, video walls, system integration, troubleshooting and ongoing maintenance.',
+          short: 'Commercial displays, video walls, media player rollouts, and reliable on-site service for retail and corporate spaces.',
           items: [
-            'Digital Signage Installation & Integration',
-            'Commercial Display Deployment',
-            'Media Player Installation & Configuration',
-            'LED Walls & Video Wall Systems',
-            'Digital Signage Network Connectivity',
-            'Content Playback Troubleshooting',
-            'Hardware Replacement & Break & Fix',
-            'Multi-Site Digital Signage Rollouts',
-            'Preventive & Corrective Maintenance'
+            'Commercial Display & LED / Video Wall Installation',
+            'Media Player Deployment, Configuration & Network Connectivity',
+            'Coordinated Multi-Site Digital Signage Rollouts',
+            'On-Site Fault Diagnosis, Hardware Replacement & Maintenance'
+          ]
+        },
+        it: {
+          code: 'IT',
+          title: 'IT & Network Rollout',
+          short: 'The on-site connectivity backbone: network hardware installation, rack build, structured cabling, and Smart Hands.',
+          items: [
+            'Network Hardware Installation, Rack Setup & Structured Patching',
+            'Multi-Site IT Hardware Rollouts & Workplace Deployment',
+            'Skilled Smart Hands & Remote Hands Support on Site',
+            'Technical Site Surveys, Verification & Handover Documentation'
           ]
         }
       }
     },
-    field: {
-      eyebrow: 'ENGINEERING & FIELD SERVICES',
-      title: 'Technical Expertise. Wherever You Need It.',
-      intro: 'INFAVO provides flexible engineering and technical field services to support technology deployments, installations and service operations.',
-      capabilities: [
-        'Field Engineer Dispatch',
-        'On-Site Technical Support',
-        'Engineering & Technical Resources',
-        'Installation & Deployment Services',
-        'Break & Fix & Troubleshooting',
-        'Site Surveys & Technical Assessments',
-        'Commissioning & System Verification',
-        'Preventive Maintenance',
-        'SLA-Based Support Agreements',
-        'Multi-Site Project Coordination',
-        'White-Label Technical Services'
-      ],
-      note: 'Note: Services and response times are agreed according to project requirements and resource availability.'
-    },
-    partners: {
-      eyebrow: 'FOR TECHNOLOGY PARTNERS',
-      title: 'Your Technical Delivery Partner in Germany.',
-      subtitle: 'Extend your service capabilities with INFAVO.',
-      intro: 'We support IT service providers, AV integrators, digital signage companies, managed service providers and international technology organizations with engineering resources, project execution and technical service delivery. Whether you need a single engineer for an urgent service call or a coordinated technical team for a multi-site deployment, INFAVO offers flexible project-based support.',
-      services: [
-        'Subcontracted Technical Services',
-        'Engineer & Technician Dispatch',
-        'White-Label Service Delivery',
-        'Multi-Site Deployment Support',
-        'Project-Based Engineering Resources',
-        'On-Site Troubleshooting & Break & Fix',
-        'Installation, Commissioning & Maintenance',
-        'Technical Reporting & Documentation'
-      ],
-      cta: 'Become a Partner'
-    },
-    industries: {
-      eyebrow: 'INDUSTRIES WE SERVE',
-      title: 'Technology Services for Every Business Environment.',
-      sectors: [
-        'Retail & Multi-Site Stores',
-        'Hospitality & Restaurants',
-        'Corporate Offices',
-        'Commercial Properties',
-        'Education & Training Facilities',
-        'Entertainment & Leisure',
-        'Healthcare Facilities',
-        'Technology & System Integration Companies'
-      ]
-    },
     why: {
-      eyebrow: 'WHY INFAVO?',
-      title: 'Expertise. Flexibility. Reliable Execution.',
+      eyebrow: 'WHO WE SUPPORT',
+      title: 'When INFAVO Is the Right Partner for You.',
       props: [
-        { title: 'One Technology Partner', desc: 'Integrated service capabilities across IT, professional AV and digital signage.' },
-        { title: 'Flexible Engineering Resources', desc: 'Access to technical specialists based on project scope and requirements.' },
-        { title: 'Project-Focused Delivery', desc: 'From individual service requests to coordinated deployments and rollouts.' },
-        { title: 'Professional Communication', desc: 'Clear project coordination, technical reporting and transparent service documentation.' },
-        { title: 'Partner-Oriented Approach', desc: 'Flexible collaboration with technology providers, integrators and business customers.' },
-        { title: 'Germany-Focused Service Delivery', desc: 'Technical services coordinated for customer sites across Germany, subject to project availability.' }
+        {
+          title: 'International AV & IT Integrators',
+          desc: 'Delivering projects across German sites without the high cost and logistics of dispatching your own team from abroad.'
+        },
+        {
+          title: 'Digital Signage & System Providers',
+          desc: 'Extending your on-site installation and project management capacity during multi-site rollouts and peak demand.'
+        },
+        {
+          title: 'Multi-Site Retail & Corporate Clients',
+          desc: 'Upgrading meeting rooms, signage, or site hardware with minimal disruption to daily business operations.'
+        }
       ]
     },
     about: {
       eyebrow: 'ABOUT INFAVO',
-      title: 'Technology Expertise. Professional Service Delivery.',
-      body: 'INFAVO is a Germany-based technology services provider specializing in IT, professional audiovisual systems and digital signage. We deliver technical services to businesses, system integrators and technology partners, supporting projects from installation and deployment to system integration, troubleshooting and maintenance.',
-      missionTitle: 'Our Mission',
-      mission: 'Our mission is to simplify technology project execution by connecting the right technical expertise with the right project requirements.'
+      title: 'A Friendly Team of Skilled AV and IT Experts.',
+      body: 'INFAVO is a Germany-based technology services partner specializing in on-site management, installation, and integration for AV, digital signage, and IT projects. Instead of overwhelming promises, we deliver dependable on-site execution, clear communication, and projects that finish on plan.',
+      missionTitle: 'Our Promise',
+      mission: 'When outsourcing any element of your digital communications or IT project to INFAVO, you can be confident that we will deliver on site just as you would.'
     },
     contact: {
-      eyebrow: 'CONTACT & PROJECT REQUESTS',
-      title: "Let's Make Your Next Project Happen.",
-      intro: 'Need technical support, an installation partner or engineering resources for your next project? Tell us what you need, and our team will review your requirements.',
+      eyebrow: 'CONTACT & QUOTES',
+      title: 'Discuss Your Requirements With Us.',
+      intro: 'Contact INFAVO to discuss your requirements and obtain a competitive quote for your next AV, digital signage, or IT project.',
       fields: {
         name: 'Name *',
         company: 'Company *',
         email: 'Business Email *',
         phone: 'Phone Number',
-        service: 'Service Required *',
-        location: 'Project Location (City / Region in Germany)',
-        date: 'Preferred Date',
-        desc: 'Project Description *',
+        service: 'Primary Project Focus *',
+        location: 'Project Location(s) in Germany',
+        date: 'Preferred Timeframe / Start Date',
+        desc: 'Project Description & Requirements *',
         file: 'File Attachment (Optional)'
       },
       serviceOptions: [
-        'IT Solutions & Services',
+        'On-Site Management & Project Coordination',
         'Professional AV Solutions',
         'Digital Signage Solutions',
-        'Engineering & Field Services',
-        'B2B Technology Partnership / Subcontracting'
+        'IT & Network Rollout / Smart Hands',
+        'B2B Partnership / Subcontracting'
       ],
       buttons: {
-        quote: 'Request a Quote',
-        support: 'Request Technical Support',
+        quote: 'Obtain a Competitive Quote',
+        support: 'Request On-Site Support',
         partner: 'Discuss a Partnership'
       },
-      successMsg: 'Thank you! Your project request has been received. Our team will review your requirements shortly.'
+      successMsg: 'Thank you! Your project request has been received. Our team will get back to you shortly.'
     },
     footer: {
       impressum: 'Legal Notice (Impressum)',
@@ -389,10 +321,9 @@ interface TechNode {
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <!-- STICKY HEADER (Modern und Schlicht) -->
+    <!-- STICKY HEADER -->
     <header class="site-header">
       <div class="header-inner">
-        <!-- Brand Logo (Vector recreation of INFAVO logo) -->
         <a href="#home" class="brand-logo" aria-label="INFAVO Home">
           <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -409,15 +340,10 @@ interface TechNode {
                 <stop offset="100%" stop-color="#7dd3fc" />
               </linearGradient>
             </defs>
-            <!-- Main Rounded Play Triangle Body -->
             <path d="M12 18 C12 9, 21 5, 29 9 L85 38 C93 42, 93 52, 85 56 L29 85 C21 89, 12 85, 12 76 Z" fill="url(#navyGrad)" stroke="rgba(56,189,248,0.35)" stroke-width="1.5"/>
-            <!-- Dynamic Electric-Blue Inner Chevrons -->
             <path d="M46 21 L57 27 L57 38 L78 44 L46 61 L46 53 L64 44 L46 39 Z" fill="url(#electricGrad)" opacity="0.9"/>
-            <!-- Stylized 'i' Stem -->
             <polygon points="27,36 39,30 39,65 27,71" fill="url(#iStemGrad)"/>
-            <!-- Golden/Orange Dot of 'i' -->
             <circle cx="33" cy="22" r="6.5" fill="#f59e0b"/>
-            <!-- Bottom Base Bar -->
             <path d="M15 89 L88 52 C92 50, 96 55, 91 59 L19 96 C14 98, 11 92, 15 89 Z" fill="url(#navyGrad)" stroke="#0ea5e9" stroke-width="1"/>
           </svg>
           <div class="brand-text">
@@ -426,19 +352,16 @@ interface TechNode {
           </div>
         </a>
 
-        <!-- Main Navigation -->
         <nav class="main-nav">
           <a href="#home">{{ t().nav.home }}</a>
-          <a href="#expertise" (click)="selectService('it')">{{ t().nav.it }}</a>
+          <a href="#onsite">{{ t().nav.onsite }}</a>
           <a href="#expertise" (click)="selectService('av')">{{ t().nav.av }}</a>
           <a href="#expertise" (click)="selectService('ds')">{{ t().nav.ds }}</a>
-          <a href="#field">{{ t().nav.field }}</a>
-          <a href="#partners">{{ t().nav.partners }}</a>
+          <a href="#expertise" (click)="selectService('it')">{{ t().nav.it }}</a>
           <a href="#about">{{ t().nav.about }}</a>
           <a href="#contact">{{ t().nav.contact }}</a>
         </nav>
 
-        <!-- Actions: Language Switch & Primary CTA -->
         <div class="header-actions">
           <button class="lang-btn" (click)="toggleLang()" title="Sprache wechseln / Switch Language">
             <span [class.active]="lang() === 'de'">DE</span>
@@ -450,7 +373,7 @@ interface TechNode {
       </div>
     </header>
 
-    <!-- DYNAMIC BACKGROUND CANVAS (IT Grid -> AV Waves -> DS Matrix) -->
+    <!-- DYNAMIC BACKGROUND CANVAS -->
     <canvas #bgCanvas class="tech-canvas"></canvas>
 
     <main class="site-main">
@@ -460,36 +383,68 @@ interface TechNode {
         <div class="container">
           <div class="badge-row">
             <span class="brand-pill">{{ t().brandPos }}</span>
-            <span class="market-pill">Germany • B2B & Partners</span>
+            <span class="market-pill">Germany • Multi-Site & White-Label</span>
           </div>
           <h1 class="hero-headline">{{ t().hero.headline }}</h1>
           <p class="hero-subheadline">{{ t().hero.subheadline }}</p>
           <p class="hero-body">{{ t().hero.body }}</p>
 
           <div class="hero-cta-group">
-            <a href="#expertise" class="btn-primary btn-lg">{{ t().hero.primaryBtn }}</a>
+            <a href="#onsite" class="btn-primary btn-lg">{{ t().hero.primaryBtn }}</a>
             <a href="#contact" class="btn-secondary btn-lg">{{ t().hero.secondaryBtn }}</a>
           </div>
 
-          <!-- Smart Customer Funnel / Direct Path Selector -->
+          <!-- Direct Path Selector -->
           <div class="quick-funnel">
             <span class="funnel-label">{{ t().hero.quickRouteLabel }}</span>
             <div class="funnel-pills">
-              <a href="#service-detail" (click)="selectService('it')" class="funnel-chip" [class.active]="activeService() === 'it'">
-                <span class="chip-code">IT</span> IT Solutions & Services
-              </a>
               <a href="#service-detail" (click)="selectService('av')" class="funnel-chip" [class.active]="activeService() === 'av'">
                 <span class="chip-code">AV</span> Professional AV Solutions
               </a>
               <a href="#service-detail" (click)="selectService('ds')" class="funnel-chip" [class.active]="activeService() === 'ds'">
                 <span class="chip-code">DS</span> Digital Signage Solutions
               </a>
+              <a href="#service-detail" (click)="selectService('it')" class="funnel-chip" [class.active]="activeService() === 'it'">
+                <span class="chip-code">IT</span> IT & Network Rollout
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 2. OUR EXPERTISE & DEDICATED SERVICE PAGES (Interactive Funnel) -->
+      <!-- 2. ON-SITE MANAGEMENT (Core Differentiator & Story) -->
+      <section id="onsite" class="section alt-bg">
+        <div class="container">
+          <div class="onsite-layout">
+            <div class="onsite-story">
+              <span class="eyebrow amber">{{ t().onsite.eyebrow }}</span>
+              <h2 class="section-title">{{ t().onsite.title }}</h2>
+              <p class="onsite-p">{{ t().onsite.p1 }}</p>
+              <p class="onsite-p">{{ t().onsite.p2 }}</p>
+              <p class="onsite-p highlight-p">{{ t().onsite.p3 }}</p>
+              <div class="onsite-cta-wrap">
+                <a href="#contact" (click)="prefillService(t().contact.serviceOptions[0])" class="btn-primary btn-lg">
+                  {{ t().onsite.cta }}
+                </a>
+              </div>
+            </div>
+
+            <div class="onsite-cards">
+              @for (hl of t().onsite.highlights; track hl.title) {
+                <div class="onsite-card">
+                  <div class="onsite-card-head">
+                    <span class="check-icon">✓</span>
+                    <h4>{{ hl.title }}</h4>
+                  </div>
+                  <p>{{ hl.desc }}</p>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FOCUSED EXPERTISE (AV, DS, IT - 4 Clear Items Each) -->
       <section id="expertise" class="section">
         <div class="container">
           <div class="section-head">
@@ -498,7 +453,6 @@ interface TechNode {
             <p class="section-subtitle">{{ t().expertise.subtitle }}</p>
           </div>
 
-          <!-- 3 Bold Overview Cards -->
           <div class="pillars-grid">
             @for (key of serviceKeys; track key) {
               <div class="pillar-card" [class.selected]="activeService() === key" (click)="selectService(key)">
@@ -513,11 +467,10 @@ interface TechNode {
             }
           </div>
 
-          <!-- Dedicated Service Deep-Dive View (Page A, B, or C) -->
           <div id="service-detail" class="service-deep-dive">
             <div class="deep-dive-header">
               <div>
-                <span class="eyebrow">{{ activeCategory().code }} SPECIALIZATION</span>
+                <span class="eyebrow">{{ activeCategory().code }} FOCUS</span>
                 <h3>{{ activeCategory().title }}</h3>
               </div>
               <a href="#contact" (click)="prefillService(activeCategory().title)" class="btn-primary">
@@ -537,69 +490,9 @@ interface TechNode {
         </div>
       </section>
 
-      <!-- 3. ENGINEERING & FIELD SERVICES -->
-      <section id="field" class="section alt-bg">
+      <!-- 4. WHO WE SUPPORT & ABOUT INFAVO -->
+      <section id="about" class="section alt-bg">
         <div class="container">
-          <div class="section-head">
-            <span class="eyebrow">{{ t().field.eyebrow }}</span>
-            <h2 class="section-title">{{ t().field.title }}</h2>
-            <p class="section-subtitle">{{ t().field.intro }}</p>
-          </div>
-
-          <div class="badge-matrix">
-            @for (cap of t().field.capabilities; track cap) {
-              <div class="matrix-card">
-                <span class="check-icon">✓</span>
-                <span>{{ cap }}</span>
-              </div>
-            }
-          </div>
-          <p class="legal-note">{{ t().field.note }}</p>
-        </div>
-      </section>
-
-      <!-- 4. FOR TECHNOLOGY PARTNERS (B2B & Subcontracting Highlight) -->
-      <section id="partners" class="section">
-        <div class="container">
-          <div class="partner-banner">
-            <div class="partner-content">
-              <span class="eyebrow amber">{{ t().partners.eyebrow }}</span>
-              <h2 class="section-title">{{ t().partners.title }}</h2>
-              <h3 class="partner-sub">{{ t().partners.subtitle }}</h3>
-              <p class="partner-intro">{{ t().partners.intro }}</p>
-              <a href="#contact" (click)="prefillService('B2B Technology Partnership / Subcontracting')" class="btn-primary">
-                {{ t().partners.cta }}
-              </a>
-            </div>
-            <div class="partner-list-box">
-              @for (srv of t().partners.services; track srv) {
-                <div class="partner-service-row">
-                  <span class="bullet-electric"></span>
-                  <span>{{ srv }}</span>
-                </div>
-              }
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. INDUSTRIES WE SERVE & 6. WHY INFAVO -->
-      <section class="section alt-bg">
-        <div class="container">
-          <!-- Industries -->
-          <div class="section-head">
-            <span class="eyebrow">{{ t().industries.eyebrow }}</span>
-            <h2 class="section-title">{{ t().industries.title }}</h2>
-          </div>
-          <div class="industries-grid">
-            @for (sector of t().industries.sectors; track sector) {
-              <div class="industry-tile">{{ sector }}</div>
-            }
-          </div>
-
-          <div class="spacer-lg"></div>
-
-          <!-- Why INFAVO -->
           <div class="section-head">
             <span class="eyebrow">{{ t().why.eyebrow }}</span>
             <h2 class="section-title">{{ t().why.title }}</h2>
@@ -612,12 +505,9 @@ interface TechNode {
               </div>
             }
           </div>
-        </div>
-      </section>
 
-      <!-- 7. ABOUT INFAVO -->
-      <section id="about" class="section">
-        <div class="container">
+          <div class="spacer-lg"></div>
+
           <div class="about-box">
             <span class="eyebrow">{{ t().about.eyebrow }}</span>
             <h2 class="section-title">{{ t().about.title }}</h2>
@@ -630,8 +520,8 @@ interface TechNode {
         </div>
       </section>
 
-      <!-- 8. CONTACT & PROJECT REQUESTS -->
-      <section id="contact" class="section alt-bg">
+      <!-- 5. CONTACT & PROJECT REQUESTS -->
+      <section id="contact" class="section">
         <div class="container">
           <div class="section-head">
             <span class="eyebrow">{{ t().contact.eyebrow }}</span>
@@ -639,73 +529,73 @@ interface TechNode {
             <p class="section-subtitle">{{ t().contact.intro }}</p>
           </div>
 
-         <form class="project-form" (ngSubmit)="submitForm($event)">
-  <div class="form-grid">
-    <div class="form-group">
-      <label>{{ t().contact.fields.name }}</label>
-      <input type="text" [(ngModel)]="formData.name" name="name" required placeholder="Max Mustermann" />
-    </div>
-    <div class="form-group">
-      <label>{{ t().contact.fields.company }}</label>
-      <input type="text" [(ngModel)]="formData.company" name="company" required placeholder="Tech GmbH" />
-    </div>
-    <div class="form-group">
-      <label>{{ t().contact.fields.email }}</label>
-      <input type="email" [(ngModel)]="formData.email" name="email" required placeholder="name@company.de" />
-    </div>
-    <div class="form-group">
-      <label>{{ t().contact.fields.phone }}</label>
-      <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="+49 ..." />
-    </div>
-    <div class="form-group">
-      <label>{{ t().contact.fields.location }}</label>
-      <input type="text" [(ngModel)]="formData.location" name="location" placeholder="Frankfurt / München / Bundesweit" />
-    </div>
-    <div class="form-group">
-      <label>{{ t().contact.fields.date }}</label>
-      <input type="date" [(ngModel)]="formData.date" name="date" />
-    </div>
-    <div class="form-group  full-width">
-      <label>{{ t().contact.fields.service }}</label>
-      <select [(ngModel)]="formData.service" name="service">
-        @for (opt of t().contact.serviceOptions; track opt) {
-          <option [value]="opt">{{ opt }}</option>
-        }
-      </select>
-    </div>
-    <div class="form-group full-width">
-      <label>{{ t().contact.fields.desc }}</label>
-      <textarea rows="4" [(ngModel)]="formData.description" name="description" required></textarea>
-    </div>
-  </div>
+          <form class="project-form" (ngSubmit)="submitForm($event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>{{ t().contact.fields.name }}</label>
+                <input type="text" [(ngModel)]="formData.name" name="name" required placeholder="Max Mustermann" />
+              </div>
+              <div class="form-group">
+                <label>{{ t().contact.fields.company }}</label>
+                <input type="text" [(ngModel)]="formData.company" name="company" required placeholder="Company GmbH" />
+              </div>
+              <div class="form-group">
+                <label>{{ t().contact.fields.email }}</label>
+                <input type="email" [(ngModel)]="formData.email" name="email" required placeholder="name@company.com" />
+              </div>
+              <div class="form-group">
+                <label>{{ t().contact.fields.phone }}</label>
+                <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="+49 ..." />
+              </div>
+              <div class="form-group">
+                <label>{{ t().contact.fields.location }}</label>
+                <input type="text" [(ngModel)]="formData.location" name="location" placeholder="Frankfurt / München / Multi-Site" />
+              </div>
+              <div class="form-group">
+                <label>{{ t().contact.fields.date }}</label>
+                <input type="date" [(ngModel)]="formData.date" name="date" />
+              </div>
+              <div class="form-group full-width">
+                <label>{{ t().contact.fields.service }}</label>
+                <select [(ngModel)]="formData.service" name="service">
+                  @for (opt of t().contact.serviceOptions; track opt) {
+                    <option [value]="opt">{{ opt }}</option>
+                  }
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label>{{ t().contact.fields.desc }}</label>
+                <textarea rows="4" [(ngModel)]="formData.description" name="description" required></textarea>
+              </div>
+            </div>
 
-  <div class="form-actions">
-    <button type="submit" [disabled]="isSending()" (click)="requestType = 'Quote'" class="btn-primary">
-      {{ isSending() ? '...' : t().contact.buttons.quote }}
-    </button>
-    <button type="submit" [disabled]="isSending()" (click)="requestType = 'Technical Support'" class="btn-secondary">
-      {{ t().contact.buttons.support }}
-    </button>
-    <button type="submit" [disabled]="isSending()" (click)="requestType = 'Partnership'" class="btn-secondary">
-      {{ t().contact.buttons.partner }}
-    </button>
-  </div>
+            <div class="form-actions">
+              <button type="submit" [disabled]="isSending()" (click)="requestType = 'Quote'" class="btn-primary">
+                {{ isSending() ? '...' : t().contact.buttons.quote }}
+              </button>
+              <button type="submit" [disabled]="isSending()" (click)="requestType = 'On-Site Support'" class="btn-secondary">
+                {{ t().contact.buttons.support }}
+              </button>
+              <button type="submit" [disabled]="isSending()" (click)="requestType = 'Partnership'" class="btn-secondary">
+                {{ t().contact.buttons.partner }}
+              </button>
+            </div>
 
-  @if (formSubmitted()) {
-    <div class="form-success">{{ t().contact.successMsg }}</div>
-  }
-  @if (formError()) {
-    <div class="form-error" style="margin-top:16px; color:#f87171;">
-      Fehler beim Senden. Bitte prüfen Sie Ihre Eingaben oder schreiben Sie direkt an info&#64;infavo.tech.
-    </div>
-  }
-</form>
+            @if (formSubmitted()) {
+              <div class="form-success">{{ t().contact.successMsg }}</div>
+            }
+            @if (formError()) {
+              <div class="form-error" style="margin-top:16px; color:#f87171;">
+                Fehler beim Senden. Bitte prüfen Sie Ihre Eingaben oder schreiben Sie direkt an info&#64;infavo.tech.
+              </div>
+            }
+          </form>
         </div>
       </section>
 
     </main>
 
-    <!-- FOOTER (Impressum & DSGVO Compliant Structure) -->
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
@@ -904,7 +794,7 @@ interface TechNode {
 
     /* SECTIONS */
     .section {
-      padding: 110px 0;
+      padding: 100px 0;
     }
     .alt-bg {
       background: rgba(15, 23, 42, 0.55);
@@ -912,7 +802,7 @@ interface TechNode {
       border-bottom: 1px solid var(--border-subtle);
     }
     .hero-section {
-      min-height: 92vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       padding-top: 130px;
@@ -946,23 +836,23 @@ interface TechNode {
     }
 
     .hero-headline {
-      font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+      font-size: clamp(2.2rem, 4.4vw, 3.8rem);
       font-weight: 800;
-      line-height: 1.08;
+      line-height: 1.12;
       letter-spacing: -0.02em;
       margin: 0 0 18px 0;
-      max-width: 920px;
+      max-width: 940px;
     }
     .hero-subheadline {
-      font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
       color: var(--electric-glow);
       font-weight: 600;
       margin: 0 0 18px 0;
     }
     .hero-body {
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       color: var(--text-muted);
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 0 36px 0;
     }
     .hero-cta-group {
@@ -1032,10 +922,11 @@ interface TechNode {
     }
     .eyebrow.amber { color: var(--amber-accent); }
     .section-title {
-      font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+      font-size: clamp(1.85rem, 3.4vw, 2.75rem);
       font-weight: 800;
       margin: 0 0 14px 0;
       letter-spacing: -0.02em;
+      line-height: 1.2;
     }
     .section-subtitle {
       color: var(--text-muted);
@@ -1044,7 +935,68 @@ interface TechNode {
       margin: 0;
     }
 
-    /* PILLARS (Bold on IT, AV, DS) */
+    /* ON-SITE MANAGEMENT SECTION */
+    .onsite-layout {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .onsite-p {
+      color: var(--text-muted);
+      font-size: 1.04rem;
+      margin: 0 0 18px 0;
+      line-height: 1.7;
+    }
+    .onsite-p.highlight-p {
+      color: var(--text-main);
+      background: rgba(14, 165, 233, 0.08);
+      border-left: 3px solid var(--electric-blue);
+      padding: 18px 20px;
+      border-radius: 0 12px 12px 0;
+      margin-top: 22px;
+    }
+    .onsite-cta-wrap {
+      margin-top: 28px;
+    }
+    .onsite-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .onsite-card {
+      background: var(--card-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 22px 24px;
+      transition: border-color 0.2s;
+    }
+    .onsite-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+    .onsite-card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .onsite-card-head h4 {
+      margin: 0;
+      font-size: 1.05rem;
+      color: var(--text-main);
+    }
+    .onsite-card p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+    .check-icon {
+      color: var(--amber-accent);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    /* PILLARS (AV, DS, IT) */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1099,7 +1051,7 @@ interface TechNode {
       font-weight: 600;
     }
 
-    /* DEDICATED SERVICE DEEP-DIVE */
+    /* DEDICATED SERVICE DEEP-DIVE (2x2 clean grid for 4 focused items) */
     .service-deep-dive {
       background: rgba(15, 23, 42, 0.9);
       border: 1px solid rgba(14, 165, 233, 0.35);
@@ -1117,18 +1069,18 @@ interface TechNode {
       border-bottom: 1px solid var(--border-subtle);
     }
     .deep-dive-header h3 {
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       margin: 0;
     }
     .capabilities-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
     }
     .cap-item {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-subtle);
-      padding: 16px 20px;
+      padding: 18px 22px;
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -1137,102 +1089,15 @@ interface TechNode {
     .cap-num {
       color: var(--electric-blue);
       font-weight: 800;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
     }
     .cap-text {
       font-weight: 600;
-      font-size: 0.94rem;
+      font-size: 0.96rem;
     }
 
-    /* FIELD SERVICES MATRIX */
-    .badge-matrix {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .matrix-card {
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      padding: 18px 22px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-    }
-    .check-icon {
-      color: var(--electric-glow);
-      font-weight: 900;
-    }
-    .legal-note {
-      margin-top: 24px;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    /* PARTNERS B2B */
-    .partner-banner {
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(11, 56, 102, 0.45) 100%);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 24px;
-      padding: 48px;
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .partner-sub {
-      color: var(--electric-glow);
-      margin: 0 0 16px 0;
-      font-size: 1.25rem;
-    }
-    .partner-intro {
-      color: var(--text-muted);
-      margin-bottom: 28px;
-    }
-    .partner-list-box {
-      background: rgba(6, 13, 26, 0.65);
-      border: 1px solid var(--border-subtle);
-      border-radius: 16px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .partner-service-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .bullet-electric {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--amber-accent);
-      flex-shrink: 0;
-    }
-
-    /* INDUSTRIES & WHY INFAVO */
-    .industries-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-    .industry-tile {
-      background: var(--card-surface);
-      border: 1px solid var(--border-subtle);
-      padding: 22px;
-      border-radius: 12px;
-      font-weight: 700;
-      text-align: center;
-      transition: border-color 0.2s;
-    }
-    .industry-tile:hover {
-      border-color: var(--electric-blue);
-    }
-    .spacer-lg { height: 80px; }
+    /* WHO WE SUPPORT & ABOUT */
+    .spacer-lg { height: 72px; }
     .why-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1255,12 +1120,11 @@ interface TechNode {
       font-size: 0.95rem;
     }
 
-    /* ABOUT */
     .about-box {
       max-width: 860px;
     }
     .about-body {
-      font-size: 1.12rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
       margin-bottom: 28px;
     }
@@ -1366,10 +1230,9 @@ interface TechNode {
 
     @media (max-width: 992px) {
       .main-nav { display: none; }
-      .pillars-grid, .capabilities-grid, .why-grid, .partner-banner {
+      .onsite-layout, .pillars-grid, .capabilities-grid, .why-grid {
         grid-template-columns: 1fr;
       }
-      .industries-grid { grid-template-columns: repeat(2, 1fr); }
       .form-grid { grid-template-columns: 1fr; }
       .form-group.full-width { grid-column: span 1; }
     }
@@ -1381,8 +1244,8 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   lang = signal<Lang>('de');
   t = computed(() => CONTENT[this.lang()]);
 
-  serviceKeys: ServiceKey[] = ['it', 'av', 'ds'];
-  activeService = signal<ServiceKey>('it');
+  serviceKeys: ServiceKey[] = ['av', 'ds', 'it'];
+  activeService = signal<ServiceKey>('av');
   activeCategory = computed(() => this.t().expertise.categories[this.activeService()]);
 
   legalModal = signal<'impressum' | 'privacy' | null>(null);
@@ -1394,7 +1257,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     company: '',
     email: '',
     phone: '',
-    service: 'IT Solutions & Services',
+    service: 'On-Site Management & Projektkoordination',
     location: '',
     date: '',
     description: ''
@@ -1421,7 +1284,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     this.legalModal.set(this.legalModal() === type ? null : type);
   }
 
-isSending = signal(false);
+  isSending = signal(false);
   formError = signal(false);
   requestType = 'Quote';
   selectedFile: File | null = null;
@@ -1443,12 +1306,8 @@ isSending = signal(false);
     this.isSending.set(true);
     this.formError.set(false);
 
-    // FormData-Objekt erstellen (unterstützt auch Datei-Anhänge)
     const payload = new FormData();
-    
-    // HIER DEINEN WEB3FORMS ACCESS KEY EINTRAGEN:
     payload.append('access_key', '53a265c0-284d-44d4-8e75-b0ae21e80c42');
-    
     payload.append('subject', `Neue INFAVO Anfrage (${this.requestType}) von ${this.formData.company || this.formData.name}`);
     payload.append('Anfrage-Typ', this.requestType);
     payload.append('Name', this.formData.name);
@@ -1465,7 +1324,6 @@ isSending = signal(false);
     }
 
     try {
-      // Wenn du stattdessen Formspree nutzt, ersetze die URL durch 'https://formspree.io/f/DEINE_ID'
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: payload
@@ -1474,10 +1332,9 @@ isSending = signal(false);
       const result = await response.json();
       if (response.ok && result.success) {
         this.formSubmitted.set(true);
-        // Formular zurücksetzen
         this.formData = {
           name: '', company: '', email: '', phone: '',
-          service: 'IT Solutions & Services', location: '', date: '', description: ''
+          service: 'On-Site Management & Projektkoordination', location: '', date: '', description: ''
         };
         this.selectedFile = null;
         setTimeout(() => this.formSubmitted.set(false), 8000);
@@ -1546,7 +1403,6 @@ isSending = signal(false);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     const p = this.scrollProgress;
-    // Morphing between IT Network (top), AV Waves (middle), and Digital Signage Matrix Grid (bottom)
     const avWaveWeight = p < 0.5 ? Math.min(1, p * 2.5) : Math.max(0, 1 - (p - 0.5) * 2.5);
     const dsGridWeight = p > 0.45 ? Math.min(1, (p - 0.45) * 2.2) : 0;
 
@@ -1558,14 +1414,12 @@ isSending = signal(false);
       if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
       if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
 
-      // AV Acoustic / Signal Wave coordinates
       const waveX = (n.idx / this.nodes.length) * canvas.width;
       const waveY = canvas.height / 2 + Math.sin(waveX * 0.01 + this.time + (n.idx % 3)) * 90;
 
       let dx = n.x * (1 - avWaveWeight) + waveX * avWaveWeight;
       let dy = n.y * (1 - avWaveWeight) + waveY * avWaveWeight;
 
-      // Digital Signage Video-Wall Matrix coordinates
       dx = dx * (1 - dsGridWeight) + n.gridX * dsGridWeight;
       dy = dy * (1 - dsGridWeight) + n.gridY * dsGridWeight;
 
@@ -1577,7 +1431,6 @@ isSending = signal(false);
       ctx.fill();
     });
 
-    // Draw subtle Electric-Blue connections
     for (let i = 0; i < positions.length; i++) {
       for (let j = i + 1; j < positions.length; j++) {
         const dist = Math.hypot(positions[j].x - positions[i].x, positions[j].y - positions[i].y);
